@@ -1,8 +1,5 @@
 ---
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import "../styles/global.css";
-import Hamburger from "../components/Hamburger.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "About Me";
 const identity = {
   firstName: "Dinaish",
@@ -15,33 +12,14 @@ const identity = {
 const skills = ["Admin Work", "Support"];
 
 const happy = false;
-const finished = false;
+const finished = true;
 const goal = 3;
 
 const skillColor = "green";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>{pageTitle}</title>
-    <style define:vars={{ skillColor }}>
-      h1 {
-        color: purple;
-        font-size: 4rem;
-      }
-      .skill {
-        color: var(--skillColor);
-        font-weight: bold;
-      }
-    </style>
-  </head>
+<BaseLayout pageTitle={pageTitle}>
   <body>
-    <Hamburger />
-    <Header />
-    <h1>{pageTitle}</h1>
-
     <p>Here are a few facts about me:</p>
     <ul>
       <li>My name is {identity.firstName}.</li>
@@ -72,9 +50,5 @@ const skillColor = "green";
         <p>My goal is not 3 days.</p>
       )
     }
-    <Footer />
-    <script>
-      import "../scripts/menu.js";
-    </script>
   </body>
-</html>
+</BaseLayout>
