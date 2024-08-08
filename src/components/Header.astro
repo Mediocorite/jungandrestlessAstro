@@ -1,8 +1,6 @@
 ---
 import instagramIcon from "/public/icons/instagram-icon.svg";
 import linkedinIcon from "/public/icons/linkedin-icon.svg";
-import profile from "../../config/profile.json";
-import Hamburger from "./Hamburger.astro";
 import ThemeIcon from "./ThemeIcon.astro";
 ---
 
@@ -21,7 +19,20 @@ import ThemeIcon from "./ThemeIcon.astro";
     <a href="#about-us" class="nav__link">About Me</a>
     <a href="#blog" class="nav__link">Blog</a>
     <ThemeIcon />
+    <div class="hamburger-menu" id="hamburger-menu">&#9776;</div>
   </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#about-us" class="mobile__link">About Me</a>
+    <a href="#blog" class="mobile__link">Blog</a>
+    <div class="mobile__social-icons">
+      <a href="https://www.instagram.com" target="_blank">
+        <img src={instagramIcon.src} alt="Instagram" />
+      </a>
+      <a href="https://www.linkedin.com" target="_blank">
+        <img src={linkedinIcon.src} alt="LinkedIn" />
+      </a>
+    </div>
+  </div>
 </header>
 
 <style>
@@ -61,4 +72,45 @@ import ThemeIcon from "./ThemeIcon.astro";
     color: #000;
     font-size: 18px;
   }
+  .hamburger-menu {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+  }
+
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .mobile__link,
+  .mobile__social-icons {
+    margin: 10px 0;
+  }
+
+  .mobile__social-icons img {
+    height: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .nav__link,
+    .navbar__social-icons,
+    .ThemeIcon {
+      display: none;
+    }
+    .hamburger-menu {
+      display: block;
+    }
+    .mobile-menu {
+      display: flex;
+    }
+  }
 </style>
+
+<script></script>
