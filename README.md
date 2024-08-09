@@ -16,7 +16,7 @@ Description: A blogging site to research various psychological studies, analysis
 /src
 - /layout
   - BaseLayout (Header, Footer)
-  - Article Layout
+  - PostLayout
     - Slot in the blog posts
     - Related posts logic
 - /pages
@@ -41,6 +41,6 @@ Description: A blogging site to research various psychological studies, analysis
   - Footer.astro
   - /home
     - Hero.astro
-    - Carrasole.astro
+    - Carousel.astro
   - blogGroup.astro
   - related.astros

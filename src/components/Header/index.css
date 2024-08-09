@@ -1,0 +1,30 @@
+header a {
+    color: inherit; /* Or any color you prefer */
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav__spacer{
+    flex-grow: 1;
+}
+
+.nav__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-content: center;
+}
+
+.nav-links--icons {
+    height: 20px;
+    display: block;
+}
+
+.nav__links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
