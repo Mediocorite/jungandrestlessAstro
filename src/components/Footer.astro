@@ -1,1 +1,248 @@
-<footer>footer</footer>
+<!-- Site footer -->
+<footer class="footer">
+  <div class="footer__container">
+    <div class="footer__row">
+      <div class="footer__col footer__col--half">
+        <h6 class="footer__title">About</h6>
+        <!-- TODO: Update this text -->
+        <p class="footer__text">
+          Jung and Restless is a blogging site designed to share research done
+          by Dinaish Mistry. Made by Anzar Web Works, using simple stack powered
+          by Astro.
+        </p>
+      </div>
+      <!-- Create categories section -->
+      <div class="footer__col footer__col--quarter">
+        <h6 class="footer__title">Categories</h6>
+        <ul class="footer__links">
+          <li class="footer__link-item">
+            <a class="footer__link" href="">Category 1</a>
+          </li>
+          <li class="footer__link-item">
+            <a class="footer__link" href="">Category 2</a>
+          </li>
+          <li class="footer__link-item">
+            <a class="footer__link" href="">Category 3</a>
+          </li>
+          <li class="footer__link-item">
+            <a class="footer__link" href="">Category 4</a>
+          </li>
+          <li class="footer__link-item">
+            <a class="footer__link" href="">Category 5</a>
+          </li>
+          <li class="footer__link-item">
+            <a class="footer__link" href="">Category 6</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- TODO: Update Site links -->
+      <div class="footer__col footer__col--quarter">
+        <h6 class="footer__title">Quick Links</h6>
+        <ul class="footer__links">
+          <li class="footer__link-item">
+            <a class="footer__link" href="">About Us</a>
+          </li>
+          <li class="footer__link-item">
+            <a class="footer__link" href="">Contact Us</a>
+          </li>
+          <li class="footer__link-item">
+            <a class="footer__link" href="">Contribute</a>
+          </li>
+          <li class="footer__link-item">
+            <a class="footer__link" href="">Privacy Policy</a>
+          </li>
+          <li class="footer__link-item">
+            <a class="footer__link" href="">Sitemap</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <hr class="footer__separator" />
+  </div>
+  <div class="footer__container">
+    <div class="footer__row">
+      <div class="footer__col footer__col--two-thirds">
+        <p class="footer__copyright-text">
+          Copyright &copy; 2017 All Rights Reserved by
+          <a href="#" class="footer__link">Diniash Mistry</a>.
+        </p>
+      </div>
+      <!-- TODO: Add Social Links -->
+      <div class="footer__col footer__col--third">
+        <ul class="footer__social-icons">
+          <li class="footer__social-icon-item">
+            <a
+              class="footer__social-icon footer__social-icon--facebook"
+              href="#"><i class="fa fa-facebook"></i></a
+            >
+          </li>
+          <li class="footer__social-icon-item">
+            <a class="footer__social-icon footer__social-icon--twitter" href="#"
+              ><i class="fa fa-twitter"></i></a
+            >
+          </li>
+          <li class="footer__social-icon-item">
+            <a
+              class="footer__social-icon footer__social-icon--dribbble"
+              href="#"><i class="fa fa-dribbble"></i></a
+            >
+          </li>
+          <li class="footer__social-icon-item">
+            <a
+              class="footer__social-icon footer__social-icon--linkedin"
+              href="#"><i class="fa fa-linkedin"></i></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: #26272b;
+    padding: 45px 0 20px;
+    font-size: 15px;
+    line-height: 24px;
+    color: #737373;
+  }
+
+  .footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .footer__row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .footer__col {
+    padding: 0 15px;
+    margin-bottom: 30px;
+  }
+
+  /* Column sizes */
+  .footer__col--half {
+    flex: 0 0 50%;
+  }
+
+  .footer__col--quarter {
+    flex: 0 0 25%;
+  }
+
+  .footer__col--two-thirds {
+    flex: 0 0 66.66%;
+  }
+
+  .footer__col--third {
+    flex: 0 0 33.33%;
+  }
+
+  .footer__separator {
+    border-top-color: #bbb;
+    opacity: 0.5;
+    margin: 20px 0;
+  }
+
+  .footer__title {
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    letter-spacing: 2px;
+  }
+
+  .footer__link {
+    color: #737373;
+  }
+
+  .footer__link:hover {
+    color: #3366cc;
+    text-decoration: none;
+  }
+
+  .footer__links {
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .footer__link-item {
+    display: block;
+  }
+
+  .footer__social-icons {
+    text-align: right;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .footer__social-icon-item {
+    margin-left: 6px;
+  }
+
+  .footer__social-icon {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 100%;
+    background-color: #33353d;
+    color: #818a91;
+    font-size: 16px;
+    text-align: center;
+    transition: all 0.2s linear;
+  }
+
+  .footer__social-icon:hover {
+    color: #fff;
+    background-color: #29aafe;
+  }
+
+  .footer__social-icon--facebook:hover {
+    background-color: #3b5998;
+  }
+
+  .footer__social-icon--twitter:hover {
+    background-color: #00aced;
+  }
+
+  .footer__social-icon--linkedin:hover {
+    background-color: #007bb6;
+  }
+
+  .footer__social-icon--dribbble:hover {
+    background-color: #ea4c89;
+  }
+
+  .footer__copyright-text {
+    margin: 0;
+  }
+
+  @media (max-width: 991px) {
+    .footer__col {
+      flex: 0 0 100%;
+    }
+    .footer__social-icons {
+      justify-content: center;
+    }
+    .footer__col--quarter {
+      flex: 0 0 50%;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .footer {
+      padding-bottom: 0;
+    }
+    .footer__copyright-text,
+    .footer__social-icons {
+      text-align: center;
+    }
+  }
+</style>

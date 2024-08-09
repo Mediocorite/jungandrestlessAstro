@@ -1,3 +1,6 @@
+header {
+    margin: 0 1.5rem;
+}
 header a {
     color: inherit; /* Or any color you prefer */
     text-decoration: none;
