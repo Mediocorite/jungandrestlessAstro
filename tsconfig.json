@@ -3,12 +3,18 @@
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "preact",
+        "baseUrl": ".",
     "paths": {
       "@components/*": ["src/components/*"],
-      "@layouts/*": ["src/layouts/*"],
+      "@y/*": ["src/layouts/*"],
       "@/*": [""],
-      "@config/*": ["config"],
-      "@public/*": ["public"]
+      "@config/*": ["config/*"],
+      "@public/*": ["public/*"]
     }
-  }
+  },
+  "include": [
+    "src/**/*.d.ts",
+    "src/**/*.ts",
+    "src/**/*.astro"
+  ]
 }
