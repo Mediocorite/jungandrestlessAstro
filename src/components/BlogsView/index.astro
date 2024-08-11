@@ -1,1 +1,13 @@
-<div class="">blog categories</div>
+---
+import { getCollection, getEntry } from "astro:content";
+import type { BlogType } from "src/schema/blogSchema";
+const allBlogPosts = await getCollection("blog");
+---
+
+<div class="">
+  {
+    allBlogPosts.map((blog: { data: BlogType }) => {
+      return <div>{blog.data.title}</div>;
+    })
+  }
+</div>
