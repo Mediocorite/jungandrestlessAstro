@@ -1,13 +1,17 @@
 ---
+// import { Debug } from "astro:components";
+import Card from "@components/common/Card.astro";
+// import type { ACTION_ERROR_CODES } from "astro:actions";
 import { getCollection, getEntry } from "astro:content";
-import type { BlogType } from "src/schema/blogSchema";
+// import type { BlogType } from "src/schema/blogSchema";
 const allBlogPosts = await getCollection("blog");
 ---
 
+<!-- <Debug answer={allBlogPosts} /> -->
 <div class="">
   {
-    allBlogPosts.map((blog: { data: BlogType }) => {
-      return <div>{blog.data.title}</div>;
+    allBlogPosts.map((blog) => {
+      return <Card {...blog} />;
     })
   }
 </div>

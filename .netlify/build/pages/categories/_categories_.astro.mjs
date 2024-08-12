@@ -1,4 +1,13 @@
-<!-- ---
+import { c as createAstro, a as createComponent, r as renderTemplate } from '../../chunks/astro/server_DSTjn-xe.mjs';
+import 'kleur/colors';
+import 'clsx';
+export { renderers } from '../../renderers.mjs';
+
+const $$Astro = createAstro("https://www.jungandrestless.com");
+const $$categories = createComponent(async ($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
+  Astro2.self = $$categories;
+  return renderTemplate`<!-- ---
 // import BlogPost from "../../components/BlogPost.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import type {
@@ -43,4 +52,19 @@ const filteredPosts = allPosts
       ))
     }
   </ul>
-</BaseLayout> -->
+</BaseLayout> -->`;
+}, "Z:/repositories-programming-applications/jungandrestlessAstro/src/pages/categories/[categories].astro", void 0);
+
+const $$file = "Z:/repositories-programming-applications/jungandrestlessAstro/src/pages/categories/[categories].astro";
+const $$url = "/categories/[categories]";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$categories,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };
