@@ -1,7 +1,30 @@
 ---
 import BaseLayout from "@y/BaseLayout.astro";
-
-const pageTitle = "Home Page";
+import PostGallery from "@components/PostsGallery/index";
+import insta from "public/icons/instagram-icon.svg";
+import linkd from "public/icons/linkedin-icon.svg";
+import Author from "public/media/Author.svg";
+import "./index.css";
 ---
 
-<BaseLayout pageTitle={pageTitle} />
+<!-- TODO: Need to fix css for this -->
+<BaseLayout pageTitle="Jung and Restless">
+  <div class="hero">
+    <div class="hero__profle">
+      <img src={Author.src} alt="" srcset="" />
+    </div>
+    <div class="hero__description text--white">
+      <h3>Dinaish Kaizad Mistry</h3>
+      <h5>About Author</h5>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi
+        sunt sit assumenda provident magni accusantium delectus odio rem.
+      </p>
+    </div>
+    <div class="hero__links">
+      <img src={insta.src} alt="" />
+      <img src={linkd.src} alt="" />
+    </div>
+  </div>
+  <PostGallery />
+</BaseLayout>
