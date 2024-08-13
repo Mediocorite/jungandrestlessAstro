@@ -1,9 +1,13 @@
-import React from "react";
+import { useState } from 'preact/hooks';
 
-export default function PostsGallery() {
-    return (
-        <div className="post-gallery">
-            posts
-        </div>
-    )
+export default function PostGallery(){
+
+    const [currentCategory, setCurrCategory] = useState("All");
+
+
+  return (
+    <div className={"container row"}>
+        <div className="container column bg-black"></div>
+    </div>
+  );
 }

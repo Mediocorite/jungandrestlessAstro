@@ -1,10 +1,25 @@
 ---
+import * as fs from "fs";
+import { getCollection } from "astro:content";
 import BaseLayout from "@y/BaseLayout.astro";
 import PostGallery from "@components/PostsGallery/index";
 import insta from "public/icons/instagram-icon.svg";
 import linkd from "public/icons/linkedin-icon.svg";
 import Author from "public/media/Author.svg";
 import "./index.css";
+
+// This code will only run at compile time anyway.
+
+const allPosts = await getCollection("blog");
+let categorySet = new Set();
+allPosts.forEach((entry) => {
+  categorySet.add(entry.data.category);
+});
+fs.writeFileSync(
+  "src/content/website/categories.json",
+  JSON.stringify(Array.from(categorySet), null, 2)
+);
+console.log("Set has been written to mySet.json");
 ---
 
 <!-- TODO: Need to fix css for this -->
