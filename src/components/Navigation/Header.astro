@@ -1,0 +1,52 @@
+<header>
+  <nav class="nav">
+    <h2 class="nav__title"><a href="/">Jung And Restless</a></h2>
+    <div class="nav__spacer"></div>
+    <div class="nav__links">
+      <a href="/about"><h5>About</h5></a>
+      <a href="/blogs"><h5>Posts</h5></a>
+    </div>
+  </nav>
+</header>
+
+<style>
+  header {
+    margin: 1.75rem 2rem 0 2rem;
+  }
+  header a {
+    color: inherit; /* Or any color you prefer */
+    text-decoration: none;
+  }
+
+  .nav {
+    display: flex;
+  }
+
+  .nav__spacer {
+    flex-grow: 1;
+  }
+
+  .nav__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-content: center;
+  }
+
+  .nav-links--icons {
+    height: 20px;
+    display: block;
+  }
+
+  .nav__links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* @media (max-width: 797px) {
+    .nav__links {
+      display: none;
+    }
+  } */
+</style>

@@ -1,13 +1,7 @@
 ---
-import Hero from "@components/Home/Hero.astro";
-import Carousel from "@components/Home/Carousel.astro";
-import BaseLayout from "../layouts/BaseLayout.astro";
-import BlogsView from "@components/BlogsView/index.astro";
+import BaseLayout from "@y/BaseLayout.astro";
+
 const pageTitle = "Home Page";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-  <Hero />
-  <Carousel />
-  <BlogsView />
-</BaseLayout>
+<BaseLayout pageTitle={pageTitle} />
