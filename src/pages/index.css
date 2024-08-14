@@ -1,9 +1,11 @@
 .hero {
   display: flex;
+  justify-content: space-around;
   background-color: hsl(0, 0%, 20%); 
   border-radius: 24px;
   padding: 1rem;
   flex-wrap: wrap;
+  margin: 1rem;
 }
 
 .hero__profile{
@@ -31,11 +33,11 @@
     line-height: 2rem;
 }
 
-.hero__description
 
 .hero__links{
-    flex-direction: row;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 .hero__links > img {
     height: 2.25rem;
@@ -44,10 +46,9 @@
     border-radius: 50%;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 900px) and (min-width: 744px) {
     .hero__links {
-        display: flex;
-        width: 25vw;
-        justify-content: space-around;
+        flex-direction: row;
+        width: 30vw;
     }
 }

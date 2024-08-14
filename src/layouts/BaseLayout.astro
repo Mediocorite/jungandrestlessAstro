@@ -12,17 +12,10 @@ const { pageTitle } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
-    <style>
-      .container {
-        margin: 1rem;
-      }
-    </style>
   </head>
   <body>
     <Header />
-    <div class="container">
-      <slot />
-    </div>
+    <slot />
     <Footer />
   </body>
 </html>
