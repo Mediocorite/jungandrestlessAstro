@@ -9,5 +9,5 @@ export default defineConfig({
   site: "https://www.jungandrestless.com",
   output: "server",
   adapter: netlify(),
-  integrations: [preact(), tailwind()]
+  integrations: [tailwind()]
 });
