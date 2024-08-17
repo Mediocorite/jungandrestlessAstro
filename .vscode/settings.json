@@ -2,5 +2,6 @@
     "cSpell.words": [
         "astro",
         "preact"
-    ]
+    ],
+    "typescript.tsdk": "node_modules/typescript/lib"
 }

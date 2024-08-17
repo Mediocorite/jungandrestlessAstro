@@ -36,8 +36,11 @@
 
 .hero__links{
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    /* flex-direction: column;
+    justify-content: space-evenly; */
+    flex-direction: row;
+    justify-content: space-around;
+    min-width: 10rem;
 }
 .hero__links > img {
     height: 2.25rem;

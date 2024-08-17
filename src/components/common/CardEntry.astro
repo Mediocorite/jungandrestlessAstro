@@ -1,75 +1,80 @@
 ---
 const { heroImage, title, description, pubDate, category, tags } =
   Astro.props?.data;
+const { viewMode, slug } = Astro.props;
 ---
 
-<div class="card">
-  <img src={heroImage.src} alt="HeroImage" class="card__image" />
-  <div class="card__content">
-    <h2 class="card__title">{title}</h2>
-    <div class="card__category">{category}</div>
-    <div class="card__tags">
-      {tags.map((tag: string) => <span class="card__tag">{tag}</span>)}
+{
+  viewMode == "Grid" ? (
+    <div class="overflow-hidden transition-shadow duration-300 rounded shadow-sm">
+      <img
+        src={heroImage.src}
+        class="object-cover w-full h-64"
+        alt="Hero Image"
+      />
+      <div class="p-5 border border-t-0">
+        <p class="mb-3 text-xs font-semibold tracking-wide uppercase">
+          <a
+            href={`/posts/${slug}`}
+            class="transition-colors duration-200 text-blue-gray-900 hover:text-deep-purple-accent-700"
+            aria-label="Category"
+            title="traveling"
+          >
+            {category}
+          </a>
+          <span class="text-gray-600">
+            — {new Date(pubDate).toDateString()}
+          </span>
+        </p>
+        <a
+          href={`/posts/${slug}`}
+          aria-label="Category"
+          title="Visit the East"
+          class="inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 hover:text-deep-purple-accent-700"
+        >
+          {title}
+        </a>
+        <p class="mb-2 text-gray-700">{description}</p>
+        <a
+          href={`/posts/${slug}`}
+          aria-label=""
+          class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
+        >
+          Read more
+        </a>
+      </div>
     </div>
-    <p class="card__description">
-      {description}
-    </p>
-    <p class="card__date">
-      {new Date(pubDate).toDateString()}
-    </p>
-  </div>
-</div>
-
-<style>
-  .card {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    overflow: hidden;
-    text-align: left;
-    margin: 20px;
-  }
-
-  .card__image {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  .card__content {
-    padding: 20px;
-  }
-
-  .card__title {
-    /* font-size: 1.5rem; */
-    /* margin: 0 0 10px; */
-  }
-
-  .card__category {
-    color: #555;
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-  }
-
-  .card__tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 10px;
-  }
-
-  .card__tag {
-    background: #eee;
-    border-radius: 3px;
-    padding: 5px 10px;
-    font-size: 0.8rem;
-    color: #555;
-  }
-
-  .card__description {
-    font-size: 1rem;
-    color: #333;
-  }
-</style>
-<script></script>
+  ) : (
+    <div class="grid py-8 sm:grid-cols-4">
+      <div class="mb-4 sm:mb-0">
+        <div class="space-y-1 text-xs font-semibold tracking-wide uppercase">
+          <a
+            href="/"
+            class="transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
+            aria-label="Category"
+          >
+            Books
+          </a>
+          <p class="text-gray-600">5 Jan 2020</p>
+        </div>
+      </div>
+      <div class="sm:col-span-3 lg:col-span-2">
+        <div class="mb-3">
+          <a
+            href="/"
+            aria-label="Article"
+            class="inline-block text-black transition-colors duration-200 hover:text-deep-purple-accent-700"
+          >
+            <p class="text-3xl font-extrabold leading-none sm:text-4xl xl:text-4xl">
+              Tell them I hate them
+            </p>
+          </a>
+        </div>
+        <p class="text-gray-700">
+          Well, the way they make shows is, they make one show. That show's
+          called a pilot. Then they show that show to the people who make shows.
+        </p>
+      </div>
+    </div>
+  )
+}

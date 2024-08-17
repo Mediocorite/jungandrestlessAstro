@@ -1,12 +1,12 @@
 ---
 heroImage: /public/media/engin-akyurt-RVrVOvUkVwk-unsplash.jpg
 category: Perspective
-description: To be Decided
+description: Exploring the impact of sleep on mental and physical health
 pubDate: 2024-08-11T23:00:00.000Z
 tags:
   - Health
   - Psychology
-title: 'Snooze or lose: Exploring the impact of sleep on mental and physical health'
+title: 'Snooze or lose'
 ---
 
 **Introduction**

@@ -1,12 +1,12 @@
 ---
 heroImage: /public/media/engin-akyurt-RVrVOvUkVwk-unsplash.jpg
 category: Resources
-description: To be Decided
+description:  Understanding Conformity and Social Influence
 pubDate: 2024-08-11T23:00:00.000Z
 tags:
   - Social
   - Psychology
-title: 'The Ripple Effect: Understanding Conformity and Social Influence'
+title: 'The Ripple Effect'
 ---
 
 **Introduction**

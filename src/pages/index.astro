@@ -2,10 +2,10 @@
 import * as fs from "fs";
 import { getCollection } from "astro:content";
 import BaseLayout from "@y/BaseLayout.astro";
-import PostGallery from "@components/PostsGallery/index";
 import insta from "public/icons/instagram-icon.svg";
 import linkd from "public/icons/linkedin-icon.svg";
 import Author from "public/media/Author.svg";
+import PostGallery from "@components/PostGallery.astro";
 import "./index.css";
 
 // This code will only run at compile time anyway.
@@ -41,5 +41,5 @@ console.log("Set has been written to mySet.json");
       <img src={linkd.src} alt="" />
     </div>
   </div>
-  <!-- <PostGallery /> -->
+  <PostGallery />
 </BaseLayout>

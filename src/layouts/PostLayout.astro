@@ -1,40 +1,40 @@
 ---
+import { Debug } from "astro:components";
 import BaseLayout from "./BaseLayout.astro";
-const { frontmatter } = Astro.props;
+// const { frotmatter } = Astro.props;
+const { entry } = Astro.props;
 ---
 
-<BaseLayout pageTitle={frontmatter.title}>
-  <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
-  <p><em>{frontmatter.description}</em></p>
-  <p>Written by: {frontmatter.author}</p>
-  <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
-  <div class="tags">
-    {
-      frontmatter.tags.map((tag: string) => (
-        <p class="tag">
-          <a href={`/tags/${tag}`}>{tag}</a>
+<BaseLayout pageTitle={entry.data.title}>
+  <Debug entry.data />
+  <div class="relative">
+    <!-- Hero Section -->
+    <div
+      class="relative h-[70vh] bg-cover bg-center"
+      style=`background-image: url(${entry.heroImage});`
+    >
+      <div
+        class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center p-4"
+      >
+        <h1 class="text-white text-4xl md:text-6xl font-bold mb-2">
+          Your Blog Post Title
+        </h1>
+        <p class="text-white text-lg md:text-xl">Posted on August 15, 2024</p>
+      </div>
+    </div>
+
+    <!-- Content Section -->
+    <div class="relative -mt-12 md:-mt-16 z-10">
+      <div class="bg-white shadow-lg rounded-lg p-6 md:p-10">
+        <p class="text-lg md:text-xl leading-relaxed">
+          Your blog content goes here. Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Proin auctor, nisi a scelerisque gravida, urna turpis
+          bibendum ipsum, id cursus massa ligula id justo...
         </p>
-      ))
-    }
+        <!-- Add more content as needed -->
+      </div>
+    </div>
   </div>
-  <style>
-    a {
-      color: #00539f;
-    }
 
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    .tag {
-      margin: 0.25em;
-      border: dotted 1px #a1a1a1;
-      border-radius: 0.5em;
-      padding: 0.5em 1em;
-      font-size: 1.15em;
-      background-color: #f8fcfd;
-    }
-  </style>
   <slot />
 </BaseLayout>

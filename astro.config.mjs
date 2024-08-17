@@ -1,6 +1,5 @@
 import { defineConfig } from 'astro/config';
 import netlify from "@astrojs/netlify";
-import preact from "@astrojs/preact";
 
 import tailwind from "@astrojs/tailwind";
 

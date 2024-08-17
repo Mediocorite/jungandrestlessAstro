@@ -1,12 +1,13 @@
 ---
 heroImage: /public/media/engin-akyurt-RVrVOvUkVwk-unsplash.jpg
 category: Research Papers
-description: To be Decided
+description: A deep dive into Cognitive Impairments Following Traumatic Brain Injury
 pubDate: 2024-08-11T23:00:00.000Z
 tags:
   - Neuroscience
   - Neuropsychology
-title: 'Lost Connections: Cognitive Impairments Following Traumatic Brain Injury'
+layout: ../../layouts/PostLayout.astro
+title: 'Lost Connections'
 ---
 
 **Introduction**
