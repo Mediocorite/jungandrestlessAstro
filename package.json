@@ -7,7 +7,8 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "postbuild": "pagefind --site dist"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.1",
@@ -22,6 +23,7 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.14",
     "@tinacms/cli": "^1.5.52",
-    "@types/node": "^22.1.0"
+    "@types/node": "^22.1.0",
+    "pagefind": "^1.1.0"
   }
 }
